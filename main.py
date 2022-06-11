@@ -4,7 +4,6 @@ from kivy.properties import StringProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
 from kivy.uix.textinput import TextInput
-from datetime import datetime
 from oblako import edit_oblako
 KV = '''
 MyBL: 
@@ -48,8 +47,6 @@ class MyBL(BoxLayout):
         print('Создание кода')
         # print(self.ids.Inp1.text,self.ids.Inp2.text,self.ids.Inp3.text,sep='\n')
         edit_oblako(self.ids.Inp1.text, self.ids.Inp2.text, self.ids.Inp3.text)
-        with open('output.txt', 'a+', encoding="utf-8") as infile:
-            infile.write(f'пользователь добавил информацию {str(datetime.today())[:19]} \n')
         self.ids.Inp1.text = ''
         self.ids.Inp2.text = ''
         self.ids.Inp3.text = ''
