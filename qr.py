@@ -3,8 +3,8 @@ import cv2
 import yadisk
 
 
-y = yadisk.YaDisk(token="AQAAAAAzOwnEAAf56nUrxnY-s0QdhKan9z7tgzE")
-#Генерация QR по ссылке
+y = yadisk.YaDisk(token='')
+#Generation Qr
 def qrsearch(name, urls):
     qr = qrcode.QRCode(
         version=1,
